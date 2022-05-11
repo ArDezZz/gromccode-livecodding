@@ -1,0 +1,8 @@
+$tablet-md: 320px;
+$desktop-md: 768px;
+$large-md: 1224px;
+@mixin md($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
