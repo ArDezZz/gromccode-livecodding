@@ -34,19 +34,21 @@ class UsersList extends React.Component {
 
     return (
       <div>
-        <Pagination
-          curPage={curPage}
-          goPrev={this.prevBtnHandler}
-          goNext={this.nextBtnHandler}
-          totalItems={users.length}
-          itemsPerPage={this.itemsPerPage}
-        />
+        <div>
+          <Pagination
+            curPage={curPage}
+            goPrev={this.prevBtnHandler}
+            goNext={this.nextBtnHandler}
+            totalItems={users.length}
+            itemsPerPage={this.itemsPerPage}
+          />
 
-        <ul className="users">
-          {usersToRender.map(user => (
-            <User name={user.name} age={user.age} key={user.id} />
-          ))}
-        </ul>
+          <ul className="users">
+            {usersToRender.map(user => (
+              <User name={user.name} age={user.age} key={user.id} />
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
