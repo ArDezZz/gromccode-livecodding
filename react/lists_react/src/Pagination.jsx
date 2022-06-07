@@ -6,11 +6,11 @@ const Pagination = ({ curPage, goNext, goPrev, totalItems, itemsPerPage }) => {
 
   return (
     <div className="pagination">
-      <button className="btn" onClick={goPrev} disabled={isPrevPageAvailable}>
+      <button disabled={isPrevPageAvailable} onClick={goPrev} className="btn">
         {isPrevPageAvailable ? '' : '←'}
       </button>
       <span className="pagination__page">{curPage}</span>
-      <button className="btn" onClick={goNext} disabled={isNextPageAvailable}>
+      <button disabled={isNextPageAvailable} onClick={goNext} className="btn">
         {isNextPageAvailable ? '' : '→'}
       </button>
     </div>
