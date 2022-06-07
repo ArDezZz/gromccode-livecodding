@@ -40,7 +40,6 @@ class UsersList extends React.Component {
           totalItems={users.length}
           itemsPerPage={this.itemsPerPage}
         />
-
         <ul className="users">
           {usersToRender.map(user => (
             <User key={user.id} name={user.name} age={user.age} />
