@@ -32,7 +32,7 @@ class UsersList extends React.Component {
     const usersToRender = users.slice(startIndex, endIndex);
 
     return (
-      <div>
+      <>
         <Pagination
           curPage={this.state.curPage}
           goPrev={this.prevBtnHandler}
@@ -46,7 +46,7 @@ class UsersList extends React.Component {
             <User key={user.id} name={user.name} age={user.age} />
           ))}
         </ul>
-      </div>
+      </>
     );
   }
 }
