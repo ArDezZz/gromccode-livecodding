@@ -41,12 +41,11 @@ class UsersList extends React.Component {
           totalItems={users.length}
           itemsPerPage={this.itemsPerPage}
         />
+
         <ul className="users">
-          <ul className="users">
-            {usersToRender.map(user => (
-              <User name={user.name} age={user.age} key={user.id} />
-            ))}
-          </ul>
+          {usersToRender.map(user => (
+            <User name={user.name} age={user.age} key={user.id} />
+          ))}
         </ul>
       </div>
     );
