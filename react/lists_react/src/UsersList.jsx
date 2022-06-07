@@ -9,6 +9,7 @@ class UsersList extends React.Component {
   state = {
     curPage: 1,
   };
+
   itemsPerPage = 3;
 
   prevBtnHandler = () => {
@@ -41,9 +42,11 @@ class UsersList extends React.Component {
           itemsPerPage={this.itemsPerPage}
         />
         <ul className="users">
-          {usersToRender.map(user => (
-            <User key={user.id} name={user.name} age={user.age} />
-          ))}
+          <ul className="users">
+            {usersToRender.map(user => (
+              <User name={user.name} age={user.age} key={user.id} />
+            ))}
+          </ul>
         </ul>
       </div>
     );
